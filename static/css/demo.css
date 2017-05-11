@@ -1,0 +1,22 @@
+/* 
+* @Author: Marte
+* @Date:   2017-04-20 16:27:33
+* @Last Modified by:   Marte
+* @Last Modified time: 2017-04-21 11:10:09
+*/
+html,body{height:100%;}
+.page{width:100%;min-height:100%;background-size:100% 100%;background-repeat:no-repeat;position:relative;overflow:hidden;background-image: url(../img/combg.jpg);}
+.pageTwoWrap h4{font-size:1.40625rem;position:absolute;left:12%;top:11.5%;}
+.pageTwoCost{font-size:0.8125rem;top:18%;position:absolute;left:12%;}
+.pageTwoCost b{font-size: 1.6875rem;color: #e71f43;}
+.pageTwoGet{width:8.90625rem;height:3.46875rem;display:block;top:84.32%;position:absolute;left:50%;margin-left:-4.5rem;}
+.pageTwoGet img{width:100%;}
+
+.pageThreeCont h3{position:absolute;top:11.9%;left:12%;font-size:1.3125rem;line-height:2.5rem;}
+.pageThreeCont h4{position:absolute;top:20.8%;left:12%;}
+.pageThreeCont h5{position:absolute;top:24.8%;left:12%;}
+.pageThreeCont h6{position:absolute;top:31.7%;left:12%;}
+.pageThreeIco{position:absolute;top:44.3%;left:21.4%;margin:0;width:59.7%;height:26.9%;}
+.pageThreeText{position:absolute;top:76.7%;left:23.4%;margin:0;}
+.pageThreeBtn{position:absolute;top:84%;left:27.8%;margin:0;background:url(../images/pageThreeBtn.png) no-repeat;width:8.90625rem;height:3.46875rem;background-size:100% 100%;display:block;}
+.swipeUp{width:1.25rem;height:1.25rem;position:absolute;bottom:0.02rem;left:50%;margin-left:-0.625rem;}

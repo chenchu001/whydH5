@@ -1,0 +1,86 @@
+/* 
+* @Author: Marte
+* @Date:   2017-03-16 15:38:00
+* @Last Modified by:   Marte
+* @Last Modified time: 2017-04-12 16:16:33
+*/
+/*去掉点击高亮（-webkit-tap-highlight-color:rgba(0, 0, 0, 0)）*/
+*{margin:0;padding:0;border:none;outline:0; font-weight:normal; font-family:"微软雅黑"; font-size:100%;color:#000000;vertical-align:baseline;background:transparent; -webkit-tap-highlight-color:rgba(0, 0, 0, 0);}
+a:visited{color:#000000;}
+body{min-height:100%;}
+article, aside, dialog, figure, footer, header,hgroup, nav, section {display:block;}
+ul,ol,li{list-style:none;}
+p{ line-height:150%;}
+i,em{font-style:normal;}
+h1,h2,h3,h4{font-style:normal;}
+blockquote, q {quotes:none;}
+blockquote:before, blockquote:after,q:before, q:after {content:'';content:none;}
+table { border-spacing:0;}
+a{text-decoration:none;}
+em{font-style:normal;}
+input[type="submit"]{-webkit-appearance:none;appearance: none;}
+input[type="button"]{-webkit-appearance:none;appearance: none;}
+input[type="search"]{-webkit-appearance:none;appearance: none;}
+body{font-family:微软雅黑,Helvetica,Arial,sans-serif;}
+td,th{vertical-align:middle;}
+/*媒体查询样式*/
+ /*将14px调整到12.8px*/
+/*@media screen and (min-width:240px){html,body{font-size:12px;}}
+@media screen and (min-width:320px){html,body{font-size:12.8px;}}
+@media screen and (min-width:360px){html,body{font-size:13.5px;}}
+@media screen and (min-width:375px){html,body{font-size:14.2px;}}
+@media screen and (min-width:414px){html,body{font-size:15.8px;}}
+@media screen and (min-width:720px){html,body{font-size:18px;}}
+@media screen and (min-width:800px){html,body{font-size:22px;}}
+@media screen and (min-width:1024px){html,body{font-size:24px;}}*/
+
+/*清楚浮动*/
+.clearfix:after{clear:both;height:0;font-size:0;display:block;content:"";visibility:hidden;}
+.clear{clear:both;}
+
+/*不定宽高元素居中*/
+/*父容器*/
+.vertical-box:before {content:'';display:inline-block;height:100%;vertical-align:middle;text-align:center;}
+/*子容器*/
+.vertical-middle{display:inline-block;max-width:100%;vertical-align:middle;}
+
+/*字体部分*/
+.fs12{font-size:0.375rem;}
+.fs14{font-size:0.4375rem;}
+.fs16{font-size:0.5rem;}
+.fs18{font-size:0.5625rem;}
+.fs20{font-size:0.625rem;}
+.fs22{font-size:0.6875rem;}
+.fs24{font-size:0.75rem;}
+.fs26{font-size:0.8125rem;}
+.fs28{font-size:0.875rem;}
+.fs30{ font-size:0.9375rem;}
+.fs32{font-size:1.0rem;}
+.fs34{font-size:1.0625rem;}
+.fs36{font-size:1.125rem;}
+.fs38{font-size:1.1875rem;}
+.fs40{font-size:1.25rem;}
+.fs42{font-size:1.3125rem;}
+.fs44{font-size:1.375rem;}
+.fs46{font-size:1.4375rem;}
+.fs48{font-size:1.5rem;}
+.fs72{font-size:2.25rem;}
+
+/*颜色部分*/
+.color_00{color:#000;}
+.color_33{color:#333;}
+.color_66{color:#666666;}
+.color_99{color:#999;}
+
+/*文本溢出省略号*/
+.textFlow{display:block;width:100%;word-break:keep-all;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+
+/*基础样式部分*/
+.block{ display:block;}
+.none{ display:none;}
+.fl{float:left;}
+.fr{float:right;}
+.bold{font-weight:bold;}
+
+/*移动端黑色背景*/
+.bg_fix{ width:100%; height:100%; position:fixed; left:0; top:0; z-index:10; background:rgba(0,0,0,0.7);}

@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="format-detection" content="telephone=no" />
+        <meta content="email=no" name="format-detection" />
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />  
+        <meta http-equiv="Pragma" content="no-cache" />  
+        <meta http-equiv="Expires" content="0" />  
+        <title>武汉移动电子账单</title>
+        <link rel="stylesheet" type="text/css" href="static/css/common.css" />
+        <link rel="stylesheet" type="text/css" href="static/css/animate.min.css" />
+        <link rel="stylesheet" type="text/css" href="static/css/style.css" />
+        <style type="text/css">
+            #main{width:14.125rem;height:8.4rem;}
+            .pageTwoCanvas{width:14.125rem;height:7.4rem;margin-top:0;}
+            #canvas,#canvas1{position:absolute;z-index:999;width:16.125rem;height:8rem;left:-1rem;top:0.2rem;}
+            body .demo-class .layui-layer-title{background:red; color:#fff; border: none;}
+            body .demo-class .layui-layer-btn{border-top:1px solid #E9E7E7;}
+            body .demo-class .layui-layer-btn a{background:#333;}
+            body .demo-class .layui-layer-btn .layui-layer-btn1{background:#999;}
+        </style>
+    </head>
+    <body>
+        <!--第一页-->
+        <div class="page pageOne none">
+            <div class="pageOneText1 bounceInDown animated" style="animation-duration:1s;-webkit-animation-duration:1s;animation-delay:.1s;-webkit-animation-delay:.1s;">
+                <img src="static/images/pageOneText1.png" alt="" />
+            </div>
+            <div class="pageOneText2 zoomInDown animated" style="animation-duration:1s;-webkit-animation-duration:1s;animation-delay:.7s;-webkit-animation-delay:.7s;">
+                <img src="static/images/pageOneText2.png" alt="" />
+            </div>
+            <div class="pageOneText3 zoomInUp animated" style="animation-duration:.5s;-webkit-animation-duration:.5s;animation-delay:1.3s;-webkit-animation-delay:1.3s;">
+                <img src="static/images/pageOneText3.png" alt="" />
+            </div>
+            <div class="pageOneIco1 fadeInLeft animated" style="animation-duration:.5s;-webkit-animation-duration:.5s;animation-delay:1.7s;-webkit-animation-delay:1.7s;">
+                <img src="static/images/pageOneIco1.png" alt="" />
+            </div>
+            <div class="pageOneIco2 fadeInRight animated" style="animation-duration:.5s;-webkit-animation-duration:.5s;animation-delay:1.8s;-webkit-animation-delay:1.8s;">
+                <img src="static/images/pageOneIco2.png" alt="" />
+            </div>
+            <!--登陆层-->
+            <div class="pageOneMsk none">
+                <form action="" method="">
+                    <div class="pageOneDialog">
+                        <h5>绑定手机号</h5>
+                        <div class="pageOneForm">
+                            <div class="inputPhone">
+                                <input type="text" class="phone_text" placeholder="手机" />
+                            </div>
+                            <div class="inputCheck clearfix">
+                                <input type="text" class="check_text" placeholder="请输入您收到的验证码" />
+                                <a href="javascript:void(0)" class="get_check" id="test1">获取验证码</a>
+                            </div>
+                            <p class="shoujiInfo none">手机号码不能为空</p>
+                        </div>
+
+                        <a class="pageOneTiJiao" href="javascript:void(0)"></a>
+                        <div class="pageThreeClose">
+                            <img src="static/images/pageTwoClose.png" />
+                        </div> 
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--第二页-->
+        <div class="page pageTwo none">
+            <div class="pageTwoWrap">
+                <div class="pageTwoCont">
+                    <h4 class="bounceInDown animated">上个月你的话费是</h4>
+                    <p class="pageTwoCost lightSpeedIn animated" style="animation-duration:1s;-webkit-animation-duration:1s;animation-delay:.6s;-webkit-animation-delay:.6s;">总价值 <b>88</b>元的<span >麻辣香锅</span></p>
+                    <!--下面的数据统计表-->
+                    <div class="pageTwoCanvas">
+                        <div id="main" class="zoomIn animated" style="animation-duration:1s;-webkit-animation-duration:1s;animation-delay:2s;-webkit-animation-delay:2s;"></div>
+                        <canvas id="canvas" class="zoomInDown animated" style="animation-duration:1s;-webkit-animation-duration:1s;animation-delay:1s;-webkit-animation-delay:1s;"></canvas>
+                        <canvas id="canvas1" class="zoomInUp animated" style="animation-duration:1s;-webkit-animation-duration:1s;animation-delay:1.5s;-webkit-animation-delay:1.5s;"></canvas>
+                    </div>
+                    <p class="pageTwoText1 rotateInUpLeft animated" style="animation-duration:1s;-webkit-animation-duration:1s;animation-delay:2.4s;-webkit-animation-delay:2.4s;">结账打发票，<br/>养成好习惯，发票就用电子的，一样管用</p> 
+                    <!--随机的图片匹配-->
+                    <div class="pageTwoWrapIco">
+                        <div class="pageTwoFoot zoomInUp animated xiangguo" style="animation-duration:1s;-webkit-animation-duration:1s;animation-delay:2.8s;-webkit-animation-delay:2.8s;">
+                            <img src="static/images/pageTwoIco1.png" />
+                        </div>
+                        <div class="pageTwoFoot zoomInUp animated shaobing none" style="animation-duration:1s;-webkit-animation-duration:1s;animation-delay:1s;-webkit-animation-delay:1s;">
+                            <img src="static/images/pageTwoIco3.png" />
+                        </div>
+                        <div class="pageTwoFoot zoomInUp animated zhishi none" style="animation-duration:1s;-webkit-animation-duration:1s;animation-delay:1s;-webkit-animation-delay:1s;">
+                            <img src="static/images/pageTwoIco4.png" />
+                        </div>
+                        <div class="pageTwoFoot zoomInUp animated kaorou none" style="animation-duration:1s;-webkit-animation-duration:1s;animation-delay:1s;-webkit-animation-delay:1s;">
+                            <img src="static/images/pageTwoIco5.png" />
+                        </div>
+                        <div class="pageTwoFoot zoomInUp animated haixian none" style="animation-duration:1s;-webkit-animation-duration:1s;animation-delay:1s;-webkit-animation-delay:1s;">
+                            <img src="static/images/pageTwoIco6.png" />
+                        </div>
+                        <div class="pageTwoFoot zoomInUp animated qiegao none" style="animation-duration:1s;-webkit-animation-duration:1s;animation-delay:1s;-webkit-animation-delay:1s;">
+                            <img src="static/images/pageTwoIco7.png" />
+                        </div>
+                    </div>
+                    <div class="pageTwoGet rotateInDownRight animated" style="animation-duration:1s;-webkit-animation-duration:1s;animation-delay:3.1s;-webkit-animation-delay:3.1s;">
+                        <img src="static/images/pageTwoBtn.png" />
+                    </div>
+                </div>
+            </div>
+            <div class="pageTwoMsk none">
+                <div class="pageTwoDialog">
+                    <div class="pageTwoDialogWrap">
+                        <h3>登录/注册139邮箱，</h3>
+                        <h6>点击【电子发票】打印电子账单即可。</h6>
+                        <p>（目前用户只能通过中国移动沟通100服务厅获取移动业务电子发票，电子发票文件会以邮件的形式发送至您的139邮箱。目前仅部分地市开通了电子发票服务，详情请咨询10086客服。）</p>
+                        <a href="http://html5.mail.10086.cn/?Adapt-Flag=on&cguid=null&mtime=1490944898501" class="pageTwoMyBtn"></a>
+                    </div>
+                    <div class="pageTwoClose">
+                        <img src="static/images/pageTwoClose.png" />
+                    </div>
+                </div>
+            </div>
+            <div class="swipeUp fadeInUp animated" style="animation-duration:1s;-webkit-animation-duration:1s;animation-delay:2.6s;-webkit-animation-delay:2.6s;">
+                <img src="static/images/redIco.gif" />
+            </div>
+        </div>
+        <!--第三页-->
+        <div class="page pageThree none">
+            <div class="pageThreeWrap">
+                <div class="pageThreeCont">
+                    <h3 class="fadeInDown animated"><b>陪伴</b>是最长情的告白</h3>
+                    <h4 class="fadeInDown animated" style="animation-duration:1s;-webkit-animation-duration:1s;animation-delay:.6s;-webkit-animation-delay:.6s;">您的手机号：<span>13878888888</span></h4>
+                    <h5 class="fadeInDown animated" style="animation-duration:1.2s;-webkit-animation-duration:1.2s;animation-delay:1.2s;-webkit-animation-delay:1.2s;">已经陪你度过了<span>365</span>天</h5>
+                    <h6 class="fadeInDown animated" style="animation-duration:1.2s;-webkit-animation-duration:1.2s;animation-delay:1.8s;-webkit-animation-delay:1.8s;">您与此号码的缘分指数为<span>86%</span></h6>
+                    <div class="pageThreeIco zoomIn animated" style="animation-duration:1.4s;-webkit-animation-duration:1.4s;animation-delay:2.2s;-webkit-animation-delay:2.2s;">
+                        <img src="static/images/pageThreeIco.png" /> 
+                    </div>
+                </div>
+                <p class="pageThreeText fadeInDown animated" style="animation-duration:1.2s;-webkit-animation-duration:1.2s;animation-delay:2.6s;-webkit-animation-delay:2.6s;">听说适合你的套餐能让我们走更远，<br/>测试下哪个是最适合你的套餐~</p>
+                <a href="javascript:void(0)" class="pageThreeBtn flipInX animated" style="animation-duration:1.2s;-webkit-animation-duration:1.2s;animation-delay:2.9s;-webkit-animation-delay:2.9s;"></a>
+            </div>
+            <!--弹框一-->
+            <div class="pageThreeMsk none">
+                <div class="pageThreeDialog">
+                    <div class="pageThreeDialogWrap">
+                        <h5>经过小移牌月老测试，</h5>
+                        <h6>当前最适合您的4G资费套餐为：</h6>
+                        <h6>套餐名称：<span>4G飞享套餐88元档次</span></h6>
+                        <a href="javascript:void(0)" class="pageThreeBtn1">
+                            <img src="static/images/pageThreeBtn1.png" />
+                        </a>
+                    </div>
+                    <div class="pageThreeClose">
+                        <img src="static/images/pageTwoClose.png" />
+                    </div>
+                </div>
+            </div>
+            <!--弹框二-->
+            <div class="pageThreeMsk1 none">
+                <div class="pageThreeDialog1">
+                    <div class="pageThreeDialogWrap1">
+                        <h5>哎哟，恭喜您！</h5>
+                        <div class="pageThreeDialogWrap1Ico">
+                            <p>您当前的套餐为</p>
+                            <p>4G飞享套餐128元档次</p>
+                        </div>
+                    </div>
+                    <div class="pageThreeClose1">
+                        <img src="static/images/pageTwoClose.png" />
+                    </div>
+                </div>
+            </div>
+            <div class="swipeUp fadeInUp animated" style="animation-duration:1s;-webkit-animation-duration:1s;animation-delay:3s;-webkit-animation-delay:3s;">
+                <img src="static/images/redIco.gif" />
+            </div>
+        </div>
+        <!--第四页-->
+        <div class="page pageFour none">
+            <div class="pageFourWrap">
+                <h4 class="fadeInDown animated">恭喜您荣获</h4>
+                <h3 class="flipInY animated" style="animation-duration:1s;-webkit-animation-duration:1s;animation-delay:.6s;-webkit-animation-delay:.6s;">网瘾小达人勋章！</h3>
+                <h5 class="fadeInUp animated" style="animation-duration:1s;-webkit-animation-duration:1s;animation-delay:1s;-webkit-animation-delay:1s;">上个月您共用了<b>4046</b>MB流量<br/>超出流量<span>100</span>MB</h5>
+                <div class="pageFourIco zoomInDown animated" style="animation-duration:1s;-webkit-animation-duration:1s;animation-delay:1.3s;-webkit-animation-delay:1.3s;">
+                    <img src="static/images/pageFourIco.png" />
+                </div>
+                <p class="fadeInDown animated" style="animation-duration:1s;-webkit-animation-duration:1s;animation-delay:1.8s;-webkit-animation-delay:1.8s;">流量超标？或许，你需要它来拯救你</p>
+                <a href="javascript:void(0)" class="pageFourBtn flipInY animated" style="animation-duration:1s;-webkit-animation-duration:1s;animation-delay:2.4s;-webkit-animation-delay:2.4s;"></a>
+            </div>
+            <!--弹框一-->
+            <div class="pageFourMsk none">
+                <div class="pageFourDialog">
+                    <p>流量老超标不划算</p>
+                    <h4>不如来个</h4>
+                    <h2>【流量三重保】套餐</h2>
+                    <p>办理档次套餐内流量三倍赠送</p>
+                    <h3>不超标，更安心！</h3>
+                    <a href="http://wap.hb.10086.cn/wap?service=page/era.NCODEModel.GPRSPackageList&listener=initPage&ID=2014031300002893" class="pageFourBtn1"></a>
+                    <div class="pageFourClose">
+                        <img src="static/images/pageTwoClose.png" />
+                    </div>
+                </div>
+            </div>
+            <div class="swipeUp fadeInUp animated" style="animation-duration:1s;-webkit-animation-duration:1s;animation-delay:3s;-webkit-animation-delay:3s;">
+                <img src="static/images/redIco.gif" />
+            </div>
+        </div>
+        <!--第四页第二种情况-->
+        <div class="page pageFour1 none">
+            <div class="pageFourWrap">
+                <h4>恭喜你达成</h4>
+                <h3>开源节流荣誉!</h3>
+                <h5>上个月您共用了<b>4046</b>MB流量<br/>结余了流量<span>998</span>MB</h5>
+                <div class="pageFour1Ico">
+                    <img src="static/images/pageFour1Ico.png" />
+                </div>
+                <p>还有这么多流量可以嗨，一起来玩！</p>
+                <a href="javascript:void(0)" class="pageFour1Btn1"></a>
+            </div>
+            <!--弹框一-->
+            <div class="pageFour1Msk none">
+                <div class="pageFour1Dialog">
+                    <h6>要玩怎么能少了</h6>
+                    <h5><span>咪咕音乐</span><i></i></h5>
+                    <p>支持你的爱豆，正版歌曲海量听！</p>
+                    <div class="pageFour1Erweima">
+                        <img src="static/images/miguErweima.png" />
+                    </div>
+                    <h4>长按识别二维码<br/>下载咪咕音乐</h4>
+                    <div class="pageFourClose">
+                        <img src="static/images/pageTwoClose.png" />
+                    </div>
+                </div>
+            </div>
+            <!--弹框二-->
+            <div class="pageFour1Msk1 none">
+                <div class="pageFour1Dialog1">
+                    <h6>要玩怎么能少了</h6>
+                    <h5><span>咪咕视频</span><i></i></h5>
+                    <p style="text-align:left;margin-left:2.34375rem;">央视咪咕强强合作，海量正<br/>版视频随时看！</p>
+                    <div class="pageFour1Erweima">
+                        <img src="static/images/shipinErweima.png" />
+                    </div>
+                    <h4>长按识别二维码<br/>下载咪咕视频</h4>
+                    <div class="pageFourClose">
+                        <img src="static/images/pageTwoClose.png" />
+                    </div>
+                </div>
+            </div>
+            <!--弹框三-->
+            <div class="pageFour1Msk2">
+                <div class="pageFourDialog2">
+                    <h3>哎呀，</h3>
+                    <p>你的流量差一丢丢</p>
+                    <h3>就要超标了</h3>
+                    <p>升个【流量三重保】</p>
+                    <p>套餐，避免超标吧！</p>
+                    <a href="http://wap.hb.10086.cn/wap?service=page/era.NCODEModel.GPRSPackageList&listener=initPage&ID=2014031300002893" class="pageFourBtn1"></a>
+                    <div class="pageFourClose">
+                        <img src="static/images/pageTwoClose.png" />
+                    </div>
+                </div>
+            </div>
+            <div class="swipeUp fadeInUp animated" style="animation-duration:1s;-webkit-animation-duration:1s;animation-delay:3s;-webkit-animation-delay:3s;">
+                <img src="static/images/redIco.gif" />
+            </div>
+        </div>
+        <!--第五页-->
+        <div class="pageFive1 pages none">
+            <div class="pageWrap">
+                <div class="top-text">
+                    <div class="pageText1 fadeInDown animated">恭喜你获得</div>
+                    <div class="pageText2 fadeInDown animated" style="animation-duration:1s;-webkit-animation-duration:1s;animation-delay:.8s;-webkit-animation-delay:.8s;"><span>人见人爱</span>成就勋章!</div>
+                    <div class="pageText4 fadeInDown animated" style="animation-duration:1s;-webkit-animation-duration:1s;animation-delay:1.6s;-webkit-animation-delay:1.6s;"><b>啊哈！</b>上个月你被呼叫了<span class="hujiao">10</span>次</div>
+                </div>
+                
+                <div class="img zoomInDown animated" style="animation-duration:1s;-webkit-animation-duration:1s;animation-delay:2s;-webkit-animation-delay:2s;">
+                    <img src="static/img/pageFive1-img.png">
+                </div>
+
+                <div class="bottom-text fadeInDown animated" style="animation-duration:1s;-webkit-animation-duration:1s;animation-delay:2.5s;-webkit-animation-delay:2.5s;">增加个人魅力与个性，会让更多人联系你哟~</div>
+
+                <div class="button pageFive1Btn flipInY animated" style="animation-duration:1s;-webkit-animation-duration:1s;animation-delay:2.8s;-webkit-animation-delay:2.8s;">
+                    <a href="javascript:;"></a>
+                </div>
+                
+            </div>
+
+            <div class="pageMask none">
+                <div class="layer">
+                    <img src="static/img/pageFive1-layer.png">
+                    <div class="x"></div>
+                    <div class="button pageFive1Btns">
+                        <a href="http://wap.hb.10086.cn/wap?service=page/era.NCODEModel.SimpleNCODE&listener=initPage&ID=2016051900007260"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="swipeUp fadeInUp animated" style="animation-duration:1s;-webkit-animation-duration:1s;animation-delay:3s;-webkit-animation-delay:3s;">
+                <img src="static/images/redIco.gif" />
+            </div>
+        </div>
+        <!--第五页第二种情况-->
+        <div class="pages pageFive2 none">
+            <div class="pageWrap">
+                <div class="top-text">
+                    <div class="pageText1">恭喜你拿下</div>
+                    <div class="pageText2"><span>交际高手</span>荣誉勋章!</div>
+                    <div class="pageText4"><b>哎哟！</b>上个月你打了<span class="tonghua">16</span>通电话</div>
+                </div>
+                
+                <div class="img">
+                    <img src="static/img/pageFive2-img.png">
+                </div>
+
+                <div class="bottom-text">增加个人魅力与个性，会让更多人联系你哟~</div>
+
+                <div class="button pageFive2Btn">
+                    <a href="javascript:;"></a>
+                </div>
+                
+            </div>
+
+            <div class="pageMask pageMask1 none">
+                <div class="layer">
+                    <img src="static/img/pageFive2-layer1.png">
+                    <div class="x"></div>
+                    <div class="button pageFive1Btns">
+                        <a href="javascript:;"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="pageMask pageMask2 none">
+                <div class="layer">
+                    <img src="static/img/pageFive2-layer2.png">
+                    <div class="x"></div>
+                    <div class="button pageFive1Btns">
+                        <a href="http://wap.hb.10086.cn/wap?service=page/packageHandle.Package4GOptional&listener=initPage&ID=2016082900007676"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="swipeUp fadeInUp animated" style="animation-duration:1s;-webkit-animation-duration:1s;animation-delay:3s;-webkit-animation-delay:3s;">
+                <img src="static/images/redIco.gif" />
+            </div>
+        </div>
+        <!--第五页第三种情况-->
+        <div class="pages pageFive3">
+            <div class="pageWrap">
+                <div class="top-text">
+                    <div class="pageText1"><span>啊哈,</span>偷偷告诉你,</div>
+                    <div class="pageText2">你上月的总通话时长有<span>168</span>分钟</div>
+                    <div class="pageText4">恭喜你Get到了<span>交际能手</span>勋章</div>
+                </div>
+                <div class="img">
+                    <img src="static/img/jiaojinengshou.png" class="jiaojinengshou">
+                    <img src="static/img/gaolengwuqing.png" class="gaolengwuqing none">
+                    <img src="static/img/hupenghuanyou.png" class="hupenghuanyou none">
+                    <img src="static/img/xixintitie.png" class="xixintitie none">
+                    <img src="static/img/bamianlinglong.png" class="bamianlinglong none">
+                    <img src="static/img/xiaoxiaohualao.png" class="xiaoxiaohualao none">
+                    <img src="static/img/xiyoutangseng.png" class="xiyoutangseng none">
+                    <img src="static/img/moyinguaner.png" class="moyinguaner none">
+                </div>
+
+                <div class="bottom-text">想让你的通话体验更完美吗？或许可以来个TA</div>
+
+                <div class="button pageFive3Btn">
+                    <a href="javascript:;" class="laidiantixing">
+                        <img src="static/img/laidiantixing.png" />
+                    </a>
+                    <a href="javascript:;" class="hecaiyin" style="display:none;">
+                        <img src="static/img/hecaiyin.png" />
+                    </a>
+                </div>
+            </div>
+            <div class="swipeUp fadeInUp animated" style="animation-duration:1s;-webkit-animation-duration:1s;animation-delay:3s;-webkit-animation-delay:3s;">
+                <img src="static/images/redIco.gif" />
+            </div>
+        </div>
+        <!--第六页-->
+        <div class="pages pageSix none">
+            <div class="pageWrap">
+                <div class="top-text">
+                    <div class="pageText1 lightSpeedIn animated">你的宽带小精灵</div>
+                    <div class="pageText2 zoomIn animated" style="animation-duration:1s;-webkit-animation-duration:1s;animation-delay:.8s;-webkit-animation-delay:.8s;">就要<span>重获自由</span>了</div>
+                    <div class="pageText3 fadeInDown animated" style="animation-duration:1s;-webkit-animation-duration:1s;animation-delay:1.4s;-webkit-animation-delay:1.4s;"><span class="">2016年5月28日</span>您与宽带小精灵签订了契约</div>
+                    <div class="pageText4 fadeInDown animated" style="animation-duration:1s;-webkit-animation-duration:1s;animation-delay:2s;-webkit-animation-delay:2s;">还剩<span class="">108</span>天，</div>
+                </div>
+                
+                <div class="img zoomInUp animated" style="animation-duration:1s;-webkit-animation-duration:1s;animation-delay:2.4s;-webkit-animation-delay:2.4s;">
+                    <img src="static/img/pageSix-img.png">
+                </div>
+
+                <div class="bottom-text bounceInLeft animated" style="animation-duration:1s;-webkit-animation-duration:1s;animation-delay:2.8s;-webkit-animation-delay:2.8s;">主人，你还愿意让我们的缘分继续吗？</div>
+
+                <div class="button bounceInRight animated" style="animation-duration:1s;-webkit-animation-duration:1s;animation-delay:2.9s;-webkit-animation-delay:2.9s;">
+                    <a href="http://cmccwh.cn/goods.html?id=4#/list"></a>
+                </div>
+                
+            </div>
+            <div class="swipeUp fadeInUp animated" style="animation-duration:1s;-webkit-animation-duration:1s;animation-delay:3s;-webkit-animation-delay:3s;">
+                <img src="static/images/redIco.gif" />
+            </div>
+        </div>
+        <!--第七页-->
+        <div class="pages pageSeven none">
+            <div class="pageWrap">
+                <div class="top-text">
+                    <div class="pageText1 fadeInLeft animated">别让积分睡大觉</div>
+                    <div class="pageText2 fadeInRight animated" style="animation-duration:1s;-webkit-animation-duration:1s;animation-delay:.8s;-webkit-animation-delay:.8s;">换成优惠<span>买买买！</span></div>
+                    <div class="pageText3 flipInX animated" style="animation-duration:1s;-webkit-animation-duration:1s;animation-delay:1.2s;-webkit-animation-delay:1.2s;">哎呦，不错哟~</div>
+                    <div class="pageText4 fadeInDown animated" style="animation-duration:1s;-webkit-animation-duration:1s;animation-delay:1.7s;-webkit-animation-delay:1.7s;">截止上月月底您的可用积分共<span class="">365</span>分</div>
+                </div>
+                
+                <div class="img zoomInRight animated" style="animation-duration:1s;-webkit-animation-duration:1s;animation-delay:2.1s;-webkit-animation-delay:2.1s;">
+                    <img src="static/img/pageSeven-img.png">
+                </div>
+
+                <div class="bottom-text zoomInLeft animated" style="animation-duration:1s;-webkit-animation-duration:1s;animation-delay:2.4s;-webkit-animation-delay:2.4s;">不知道怎么用？跟我来！</div>
+
+                <div class="button bounceIn animated" style="animation-duration:1s;-webkit-animation-duration:1s;animation-delay:3.1s;-webkit-animation-delay:3.1s;">
+                    <a href="http://wap.hb.10086.cn/wap?service=page/era.Login&listener=initPage&backUrl=http%3A%2F%2Fwap.hb.10086.cn%3A80%2Fwap%3Fservice%3Dpage%2Fera.integrateIndex%26listener%3DinitPage"></a>
+                </div>
+                
+            </div>
+            <div class="swipeUp fadeInUp animated" style="animation-duration:1s;-webkit-animation-duration:1s;animation-delay:3s;-webkit-animation-delay:3s;">
+                <img src="static/images/redIco.gif" />
+            </div>
+        </div>
+        <!--第八页-->
+        <div class="pages pageEight none">
+            <div class="pageWrap">
+                <div class="top-text">
+                    <div class="score">
+                        <div class="pageEight-Text2 bounceInLeft animated" style="animation-duration:1s;-webkit-animation-duration:1s;animation-delay:.6s;-webkit-animation-delay:.6s;">你上月的话费分值为：</div>
+                        <div class="leida">
+                            <canvas id="myCanvas" width="220px" height="220px"></canvas>
+                            <canvas id="myCanvas2" width="220px" height="220px"></canvas>
+                            <div class="one">语音通话<span>78</span>分</div>
+                            <div class="two">话费<span>50</span>分</div>
+                            <div class="three">4G资费<span>68</span>分</div>
+                            <div class="four">宽带<span>90</span>分</div>
+                            <div class="five">流量<span>149</span>分</div>
+                        </div>
+                    </div>
+                    
+                    <div class="pageEight-Text3 fadeInLeft animated" style="animation-duration:1s;-webkit-animation-duration:1s;animation-delay:1.2s;-webkit-animation-delay:1.2s;">话费总分值<span>365</span>分</div>
+                    <div class="pageEight-Text4 fadeInLeft animated" style="animation-duration:1s;-webkit-animation-duration:1s;animation-delay:1.5s;-webkit-animation-delay:1.5s;text-align:right;margin-bottom:0.6125rem;">打败<span class="">88%</span>的武汉移动用户</div>
+                    <div class="pageEight-Text1 swing animated">荣获<span>“无所畏惧的土豪”</span>的称号！</div>
+                </div>
+                
+                <div class="img rotateInUpLeft animated" style="animation-duration:1s;-webkit-animation-duration:1s;animation-delay:2s;-webkit-animation-delay:2s;">
+                    <img src="static/img/juren.png">
+                </div>
+
+                <div class="button pageEightBtn">
+                    <a href="javascript:;" class="moreAdd rotateInDownRight animated" style="animation-duration:1s;-webkit-animation-duration:1s;animation-delay:2.2s;-webkit-animation-delay:2.2s;"></a>
+                    <a class="share-button rotateInDownLeft animated" href="javascript:;" style="animation-duration:1s;-webkit-animation-duration:1s;animation-delay:2.2s;-webkit-animation-delay:2.2s;"></a>
+                </div>
+                
+            </div>
+
+            <!-- <div class="pageMask pageMask1 none">
+                <div class="layer">
+                    <img src="static/img/pageEight-layer1.png">
+                    <div class="x"></div>
+                    <a class="link" href="http://www.hb.10086.cn/pages/hyhdown_wap/?rd=45&WT.ac=01hyh03_JINGMEN&timestamp1490930524031="></a>
+                </div>
+            </div>
+            <div class="pageMask pageMask2 none">
+                <div class="layer">
+                    <img src="static/img/pageEight-layer2.png">
+                    <div class="x"></div>
+                    <a class="link" href="http://wap.hb.10086.cn/wap?service=page/era.SPModel.SPModelSMSConfirm&listener=initPage&ID=2016121200017918"></a>
+                </div>
+            </div>
+            <div class="pageMask pageMask3 none">
+                <div class="layer">
+                    <img src="static/img/pageEight-layer3.png">
+                    <div class="x"></div>
+                    <a class="link" href="http://wap.hb.10086.cn/wap?service=page/era.grpFamily.InOrOutGrpFamily&listener=initPage&ID=2014122400003754"></a>
+                </div>
+            </div> -->
+            <div class="pageMask pageMask4 none">
+                <div class="layer">
+                    <img src="static/img/pageEight-layer.png">
+                    <div class="x"></div>
+                    <div class="button">
+                        <a href="http://cmccwh.cn/"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="share none">
+                <img src="static/img/share.png">
+            </div> 
+        </div>
+        <!--第九页-->
+        <div class="pages pageNine none">
+             <div class="pageNineOne">
+                 <img src="static/img/pageNineOne.png">
+             </div>
+             <div class="pageNineTwo">
+                 <img src="static/img/pageNienTwo.png">
+             </div>
+             <div class="pageNineText">
+                 <p>办理了<span>流量加油包</span>业务</p>
+             </div>
+             <div class="pageNineThree">
+                 <img src="static/img/pageNineThree.png" />
+             </div>
+             <div class="pageNineFive">
+                 <img src="static/img/pageNineFive.png" />
+             </div>
+        </div>
+    </body>
+    <script type="text/javascript" src="static/js/jQuery.js"></script>
+    <script type="text/javascript" src="static/js/jquery.touchSwipe.min.js"></script>
+    <script type="text/javascript" src="static/js/fastclick.js"></script>
+    <script type="text/javascript" src="static/js/common.js"></script>
+    <script type="text/javascript" src="static/js/echarts.min.js"></script>
+    <script type="text/javascript" src="static/js/eightCanvas.js"></script>
+    <script type="text/javascript" src="static/js/index.js"></script>
+    <script type="text/javascript" src="static/js/twoCanvas.js"></script>
+    <script type="text/javascript" src="static/js/layer/layer.js"></script>
+    
+    <script>
+        $(function(){
+            /*fastclick_iphone手机专用*/
+            window.addEventListener('load', function() {
+            FastClick.attach(document.body);
+            }, false);
+        });
+        //组织默认的下滑效果
+        document.addEventListener('touchmove', function (event) {
+            event.preventDefault();
+        }, false); 
+        if($('.phone_text').val()===""){
+            $('#test1').on('click',function(){
+               //  layer.open({
+               //      type: 1,
+               //      icon:2,
+               //      area: ['200px', '140px'],
+               //      shadeClose: true, //点击遮罩关闭
+               //      skin: 'demo-class',
+               //      title:'错误信息',
+               //      content: '\<\div style="padding:20px;">手机号不能为空\<\/div>'
+               // });
+                layer.alert('手机号不能为空', {
+                    title:'错误信息',
+                  icon: 2,
+                  skin: 'layer-ext-moon' //该皮肤由layer.seaning.com友情扩展。关于皮肤的扩展规则，去这里查阅
+                })
+            })   
+        };
+    </script>
+</html>
